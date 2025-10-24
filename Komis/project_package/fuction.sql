@@ -22,9 +22,10 @@ RETURNS NUMERIC AS $$
 DECLARE
     v_srednia NUMERIC;
 BEGIN
-    SELECT AVG(cena) INTO v_srednia
+    SELECT AVG(s.cena) INTO v_srednia
     FROM samochod s
-    JOIN plac p ON s.id_samochod = p.id_plac
+    JOIN dostawa d ON s.id_samochod = d.id_samochod
+    JOIN plac p ON d.id_plac = p.id_plac
     WHERE p.id_komis = p_id_komis;
 
     RETURN v_srednia;
@@ -33,7 +34,7 @@ $$ LANGUAGE plpgsql;
 
 
 -- Test
-SELECT liczba_sprzedanych_samochodow(1);
+SELECT srednia_cena_komisu(1);  -- średnia cena dla komisu o id_komis = 1
 
 --------------------------------------------3. Funkcja sprawdzająca dostępność samochodu---------------------------------------
 CREATE OR REPLACE FUNCTION dostepny_do_sprzedazy(p_id_samochod INT)
@@ -57,7 +58,7 @@ SELECT dostepny_do_sprzedazy(5);
 --------------------------------------------4. Funkcja tworząca raport transakcji dla klienta---------------------------------------
 CREATE OR REPLACE FUNCTION raport_klienta(p_id_klient INT)
 RETURNS TABLE(
-    liczba_transakcji INT,
+    liczba_transakcji BIGINT,
     laczna_wartosc NUMERIC
 ) AS $$
 BEGIN
@@ -68,6 +69,7 @@ BEGIN
     WHERE k.id_klient = p_id_klient;
 END;
 $$ LANGUAGE plpgsql;
+
 
 
 -- Test
