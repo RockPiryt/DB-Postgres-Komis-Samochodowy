@@ -734,55 +734,107 @@ VALUES
 
 --------------------------------------------KARTOTEKA ZLECEŃ INSERTY----------------------------------------
 
--- Sprzedaż na placu 1 przez sprzedawcę 1
-INSERT INTO kartoteka_transakcji (rodzaj, data_transakcji, samochod_w_rozliczeniu, uwagi, id_samochod, id_klient, id_sprzedawca, id_plac, id_faktura)
-VALUES 
-('sprzedaż', '2023-01-10', false, 'Dodać opony ziomowe', 1, 7, 1, 1, 1);
-
--- Sprzedaż na placu 1 przez sprzedawcę 2
-INSERT INTO kartoteka_transakcji (rodzaj, data_transakcji, samochod_w_rozliczeniu, uwagi, id_samochod, id_klient, id_sprzedawca, id_plac, id_faktura)
-VALUES 
-('sprzedaż', '2023-01-15', true, 'Samochód kupiony z rabatem', 2, 10, 9, 1, 1);
-
--- Sprzedaż na placu 1 przez sprzedawcę 3
-INSERT INTO kartoteka_transakcji (rodzaj, data_transakcji, samochod_w_rozliczeniu, uwagi, id_samochod, id_klient, id_sprzedawca, id_plac, id_faktura)
-VALUES 
-('sprzedaż', '2023-02-05', false, 'Polerka przed wydaniem', 3, 3, 3, 1, 2);
-
--- Kupno na placu 2 przez sprzedawcę 4
-INSERT INTO kartoteka_transakcji (rodzaj, data_transakcji, samochod_w_rozliczeniu, uwagi, id_samochod, id_klient, id_sprzedawca, id_plac, id_faktura)
-VALUES 
-('kupno', '2024-02-20', false, 'Samochód kupiony z rabatem', 4, 6, 4, 2, 2);
-
--- Sprzedaż na placu 2 przez sprzedawcę 5
-INSERT INTO kartoteka_transakcji (rodzaj, data_transakcji, samochod_w_rozliczeniu, uwagi, id_samochod, id_klient, id_sprzedawca, id_plac, id_faktura)
-VALUES 
-('sprzedaż', '2024-03-01', true, 'Brak uwag', 5, 2, 5, 2, 5);
-
--- Sprzedaż na placu 2 przez sprzedawcę 6
-INSERT INTO kartoteka_transakcji (rodzaj, data_transakcji, samochod_w_rozliczeniu, uwagi, id_samochod, id_klient, id_sprzedawca, id_plac, id_faktura)
-VALUES 
-('sprzedaż', '2024-03-15', false, 'Brak uwag', 6, 8, 9, 2, 6);
-
--- Kupno na placu 3 przez sprzedawcę 7
-INSERT INTO kartoteka_transakcji (rodzaj, data_transakcji, samochod_w_rozliczeniu, uwagi, id_samochod, id_klient, id_sprzedawca, id_plac, id_faktura)
-VALUES 
-('kupno', '2024-04-01', true, 'Samochód w rozliczeniu', 7, 9, 5, 3, 7);
-
--- Sprzedaż na placu 3 przez sprzedawcę 8
-INSERT INTO kartoteka_transakcji (rodzaj, data_transakcji, samochod_w_rozliczeniu, uwagi, id_samochod, id_klient, id_sprzedawca, id_plac, id_faktura)
-VALUES 
-('sprzedaż', '2024-04-10', false, 'Brak uwag', 8, 5, 8, 3, 8);
-
--- Sprzedaż na placu 3 przez sprzedawcę 9
-INSERT INTO kartoteka_transakcji (rodzaj, data_transakcji, samochod_w_rozliczeniu, uwagi, id_samochod, id_klient, id_sprzedawca, id_plac, id_faktura)
-VALUES 
-('sprzedaż', '2024-04-20', false, 'Dodać opony letnie', 9, 4, 9, 3, 9);
-
--- Kupno na placu 1 przez sprzedawcę 10
-INSERT INTO kartoteka_transakcji (rodzaj, data_transakcji, samochod_w_rozliczeniu, uwagi, id_samochod, id_klient, id_sprzedawca, id_plac, id_faktura)
-VALUES 
-('kupno', '2024-05-01', true, 'Samochód w rozliczeniu', 10, 1, 10, 1, 9);
+INSERT INTO kartoteka_transakcji (rodzaj, data_transakcji, samochod_w_rozliczeniu, uwagi, id_samochod, id_klient, id_sprzedawca, id_plac, id_faktura) VALUES
+('sprzedaż', '2023-01-10', false, 'Dodać opony zimowe', 1, 7, 1, 1, 1),
+('sprzedaż', '2023-01-15', true, 'Samochód kupiony z rabatem', 2, 10, 9, 1, 1),
+('sprzedaż', '2023-02-05', false, 'Polerka przed wydaniem', 3, 3, 3, 1, 2),
+('kupno', '2024-02-20', false, 'Samochód kupiony z rabatem', 4, 6, 4, 2, 2),
+('sprzedaż', '2024-03-01', true, 'Brak uwag', 5, 2, 5, 2, 5),
+('sprzedaż', '2024-03-15', false, 'Brak uwag', 6, 8, 9, 2, 6),
+('kupno', '2024-04-01', true, 'Samochód w rozliczeniu', 7, 9, 5, 3, 7),
+('sprzedaż', '2024-04-10', false, 'Brak uwag', 8, 5, 8, 3, 8),
+('sprzedaż', '2024-04-20', false, 'Dodać opony letnie', 9, 4, 9, 3, 9),
+('kupno', '2024-05-01', true, 'Samochód w rozliczeniu', 10, 1, 10, 1, 9),
+('sprzedaż', '2024-05-05', true, 'Brak uwag', 11, 2, 1, 1, 10),
+('sprzedaż', '2024-05-12', false, 'Sprawdzić poziom oleju', 12, 3, 2, 1, 11),
+('kupno', '2024-05-15', true, 'Samochód używany', 13, 4, 3, 2, 12),
+('sprzedaż', '2024-05-20', false, 'Dodatkowe dywaniki', 14, 5, 4, 2, 13),
+('sprzedaż', '2024-05-25', true, 'Brak uwag', 15, 6, 5, 3, 14),
+('kupno', '2024-06-01', false, 'Samochód w rozliczeniu', 16, 7, 6, 3, 15),
+('sprzedaż', '2024-06-05', true, 'Wymiana klocków hamulcowych', 17, 8, 7, 1, 16),
+('sprzedaż', '2024-06-10', false, 'Brak uwag', 18, 9, 8, 2, 17),
+('kupno', '2024-06-15', true, 'Samochód używany', 19, 10, 9, 2, 18),
+('sprzedaż', '2024-06-20', false, 'Brak uwag', 20, 1, 10, 3, 19),
+('sprzedaż', '2024-06-25', true, 'Samochód kupiony z rabatem', 21, 2, 1, 1, 20),
+('kupno', '2024-07-01', false, 'Wymiana oleju', 22, 3, 2, 1, 21),
+('sprzedaż', '2024-07-05', true, 'Brak uwag', 23, 4, 3, 2, 22),
+('sprzedaż', '2024-07-10', false, 'Samochód w rozliczeniu', 24, 5, 4, 2, 23),
+('kupno', '2024-07-15', true, 'Samochód używany', 25, 6, 5, 3, 24),
+('sprzedaż', '2024-07-20', false, 'Brak uwag', 26, 7, 6, 3, 25),
+('sprzedaż', '2024-07-25', true, 'Dodać dodatkowy bagażnik', 27, 8, 7, 1, 26),
+('kupno', '2024-08-01', false, 'Samochód w rozliczeniu', 28, 9, 8, 1, 27),
+('sprzedaż', '2024-08-05', true, 'Brak uwag', 29, 10, 9, 2, 28),
+('sprzedaż', '2024-08-10', false, 'Sprawdzić hamulce', 30, 1, 10, 2, 29),
+('kupno', '2024-08-15', true, 'Samochód używany', 31, 2, 1, 3, 30),
+('sprzedaż', '2024-08-20', false, 'Brak uwag', 32, 3, 2, 3, 31),
+('sprzedaż', '2024-08-25', true, 'Dodać felgi aluminiowe', 33, 4, 3, 1, 32),
+('kupno', '2024-09-01', false, 'Samochód w rozliczeniu', 34, 5, 4, 1, 33),
+('sprzedaż', '2024-09-05', true, 'Brak uwag', 35, 6, 5, 2, 34),
+('sprzedaż', '2024-09-10', false, 'Dodatkowe dywaniki', 36, 7, 6, 2, 35),
+('kupno', '2024-09-15', true, 'Samochód używany', 37, 8, 7, 3, 36),
+('sprzedaż', '2024-09-20', false, 'Brak uwag', 38, 9, 8, 3, 37),
+('sprzedaż', '2024-09-25', true, 'Samochód kupiony z rabatem', 39, 10, 9, 1, 38),
+('kupno', '2024-10-01', false, 'Wymiana oleju', 40, 1, 10, 1, 39),
+('sprzedaż', '2024-10-05', true, 'Brak uwag', 41, 2, 1, 2, 40),
+('sprzedaż', '2024-10-10', false, 'Samochód w rozliczeniu', 42, 3, 2, 2, 41),
+('kupno', '2024-10-15', true, 'Samochód używany', 43, 4, 3, 3, 42),
+('sprzedaż', '2024-10-20', false, 'Brak uwag', 44, 5, 4, 3, 43),
+('sprzedaż', '2024-10-25', true, 'Dodać felgi aluminiowe', 45, 6, 5, 1, 44),
+('kupno', '2024-11-01', false, 'Samochód w rozliczeniu', 46, 7, 6, 1, 45),
+('sprzedaż', '2024-11-05', true, 'Brak uwag', 47, 8, 7, 2, 46),
+('sprzedaż', '2024-11-10', false, 'Sprawdzić hamulce', 48, 9, 8, 2, 47),
+('kupno', '2024-11-15', true, 'Samochód używany', 49, 10, 9, 3, 48),
+('sprzedaż', '2024-11-20', false, 'Brak uwag', 50, 1, 10, 3, 49),
+('sprzedaż', '2024-11-25', true, 'Samochód kupiony z rabatem', 51, 2, 1, 1, 50),
+('kupno', '2024-12-01', false, 'Wymiana oleju', 52, 3, 2, 1, 51),
+('sprzedaż', '2024-12-05', true, 'Brak uwag', 53, 4, 3, 2, 52),
+('sprzedaż', '2024-12-10', false, 'Samochód w rozliczeniu', 54, 5, 4, 2, 53),
+('kupno', '2024-12-15', true, 'Samochód używany', 55, 6, 5, 3, 54),
+('sprzedaż', '2024-12-20', false, 'Brak uwag', 56, 7, 6, 3, 55),
+('sprzedaż', '2024-12-25', true, 'Dodać dodatkowy bagażnik', 57, 8, 7, 1, 56),
+('kupno', '2025-01-01', false, 'Samochód w rozliczeniu', 58, 9, 8, 1, 57),
+('sprzedaż', '2025-01-05', true, 'Brak uwag', 59, 10, 9, 2, 58),
+('sprzedaż', '2025-01-10', false, 'Dodatkowe dywaniki', 60, 1, 10, 2, 59),
+('kupno', '2025-01-15', true, 'Samochód używany', 61, 2, 1, 3, 60),
+('sprzedaż', '2025-01-20', false, 'Brak uwag', 62, 3, 2, 3, 61),
+('sprzedaż', '2025-01-25', true, 'Samochód kupiony z rabatem', 63, 4, 3, 1, 62),
+('kupno', '2025-02-01', false, 'Wymiana oleju', 64, 5, 4, 1, 63),
+('sprzedaż', '2025-02-05', true, 'Brak uwag', 65, 6, 5, 2, 64),
+('sprzedaż', '2025-02-10', false, 'Samochód w rozliczeniu', 66, 7, 6, 2, 65),
+('kupno', '2025-02-15', true, 'Samochód używany', 67, 8, 7, 3, 66),
+('sprzedaż', '2025-02-20', false, 'Brak uwag', 68, 9, 8, 3, 67),
+('sprzedaż', '2025-02-25', true, 'Dodać felgi aluminiowe', 69, 10, 9, 1, 68),
+('kupno', '2025-03-01', false, 'Samochód w rozliczeniu', 70, 1, 10, 1, 69),
+('sprzedaż', '2025-03-05', true, 'Brak uwag', 71, 2, 1, 2, 70),
+('sprzedaż', '2025-03-10', false, 'Sprawdzić hamulce', 72, 3, 2, 2, 71),
+('kupno', '2025-03-15', true, 'Samochód używany', 73, 4, 3, 3, 72),
+('sprzedaż', '2025-03-20', false, 'Brak uwag', 74, 5, 4, 3, 73),
+('sprzedaż', '2025-03-25', true, 'Samochód kupiony z rabatem', 75, 6, 5, 1, 74),
+('kupno', '2025-04-01', false, 'Wymiana oleju', 76, 7, 6, 1, 75),
+('sprzedaż', '2025-04-05', true, 'Brak uwag', 77, 8, 7, 2, 76),
+('sprzedaż', '2025-04-10', false, 'Samochód w rozliczeniu', 78, 9, 8, 2, 77),
+('kupno', '2025-04-15', true, 'Samochód używany', 79, 10, 9, 3, 78),
+('sprzedaż', '2025-04-20', false, 'Brak uwag', 80, 1, 10, 3, 79),
+('sprzedaż', '2025-04-25', true, 'Dodać dodatkowy bagażnik', 81, 2, 1, 1, 80),
+('kupno', '2025-05-01', false, 'Samochód w rozliczeniu', 82, 3, 2, 1, 81),
+('sprzedaż', '2025-05-05', true, 'Brak uwag', 83, 4, 3, 2, 82),
+('sprzedaż', '2025-05-10', false, 'Dodatkowe dywaniki', 84, 5, 4, 2, 83),
+('kupno', '2025-05-15', true, 'Samochód używany', 85, 6, 5, 3, 84),
+('sprzedaż', '2025-05-20', false, 'Brak uwag', 86, 7, 6, 3, 85),
+('sprzedaż', '2025-05-25', true, 'Samochód kupiony z rabatem', 87, 8, 7, 1, 86),
+('kupno', '2025-06-01', false, 'Wymiana oleju', 88, 9, 8, 1, 87),
+('sprzedaż', '2025-06-05', true, 'Brak uwag', 89, 10, 9, 2, 88),
+('sprzedaż', '2025-06-10', false, 'Samochód w rozliczeniu', 90, 1, 10, 2, 89),
+('kupno', '2025-06-15', true, 'Samochód używany', 91, 2, 1, 3, 90),
+('sprzedaż', '2025-06-20', false, 'Brak uwag', 92, 3, 2, 3, 91),
+('sprzedaż', '2025-06-25', true, 'Dodać felgi aluminiowe', 93, 4, 3, 1, 92),
+('kupno', '2025-07-01', false, 'Samochód w rozliczeniu', 94, 5, 4, 1, 93),
+('sprzedaż', '2025-07-05', true, 'Brak uwag', 95, 6, 5, 2, 94),
+('sprzedaż', '2025-07-10', false, 'Sprawdzić hamulce', 96, 7, 6, 2, 95),
+('kupno', '2025-07-15', true, 'Samochód używany', 97, 8, 7, 3, 96),
+('sprzedaż', '2025-07-20', false, 'Brak uwag', 98, 9, 8, 3, 97),
+('sprzedaż', '2025-07-25', true, 'Samochód kupiony z rabatem', 99, 10, 9, 1, 98),
+('kupno', '2025-08-01', false, 'Wymiana oleju', 100, 1, 10, 1, 99);
 
 --------------------------------------------UBEZPIECZENIA INSERTY----------------------------------------
 
